@@ -1,12 +1,4 @@
-FROM tomcat:8.0-alpine
-
-MAINTAINER Hari harichowdary.java@gmail.com
-
-
-
-WORKDIR /usr/local/tomcat
-
-COPY **/*.war /usr/local/tomcat/webapps/app.war
-
-EXPOSE 8080
-CMD ["catalina.sh", "run"]
+FROM dockerjenkin:v5.o.o.
+MAINTAINER spdsama2000@gmail.com
+WORKDIR /var/run/docker.sock
+EXPOSE 80
